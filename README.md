@@ -13,3 +13,5 @@
 </p>
 <p align="center"><em><u><p>Study HTML from 13/01/25 18:48</p></u></em>
 <hr /></p>
+<input type="radio" id="" /><input type="text" id="" /><p align="center"><em><u><p>P!!F!!L!!S</p></u></em>
+<hr /></p>
