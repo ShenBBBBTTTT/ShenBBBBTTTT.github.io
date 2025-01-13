@@ -13,5 +13,20 @@
 </p>
 <p align="center"><em><u><p>Study HTML from 13/01/25 18:48</p></u></em>
 <hr /></p>
-<input type="radio" id="" /><input type="text" id="" /><p align="center"><em><u><p>P!!F!!L!!S</p></u></em>
-<hr /></p>
+<p align="right">#00ff80<u><em><strong>P!!F!!L!!S [○･｀Д´･ ○]</strong></em></u></p>
+<input type="text" id="" />
+
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
+
+button.addEventListener("click", updateButton);
+
+function updateButton() {
+  if (button.value === "开动机器") {
+    button.value = "停止机器";
+    paragraph.textContent = "机器启动了！";
+  } else {
+    button.value = "开动机器";
+    paragraph.textContent = "机器已经停下了。";
+  }
+}
