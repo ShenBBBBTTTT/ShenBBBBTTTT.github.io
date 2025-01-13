@@ -14,19 +14,8 @@
 <p align="center"><em><u><p>Study HTML from 13/01/25 18:48</p></u></em>
 <hr /></p>
 <p align="right">#00ff80<u><em><strong>P!!F!!L!!S [○･｀Д´･ ○]</strong></em></u></p>
+<hr />
+<h6>输点什么</h6>
 <input type="text" id="" />
+<input type="button" value="点我" id="">
 
-const button = document.querySelector("input");
-const paragraph = document.querySelector("p");
-
-button.addEventListener("click", updateButton);
-
-function updateButton() {
-  if (button.value === "开动机器") {
-    button.value = "停止机器";
-    paragraph.textContent = "机器启动了！";
-  } else {
-    button.value = "开动机器";
-    paragraph.textContent = "机器已经停下了。";
-  }
-}
