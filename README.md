@@ -13,7 +13,7 @@
 </p>
 <p align="center"><em><u><p>Study HTML from 13/01/25 18:48</p></u></em>
 <hr /></p>
-<p align="right">#00ff80<u><em><strong>P!!F!!L!!S [○･｀Д´･ ○]</strong></em></u></p>
+#00ff80<p align="right"><u><em><strong>P!!F!!L!!S [○･｀Д´･ ○]</strong></em></u></p>
 <hr />
 <h6>输点什么</h6>
 <input type="text" id="" />
