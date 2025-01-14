@@ -1,4 +1,4 @@
-window.onload()=function{
+window.onload()=function(){
   const button = document.querySelector("input");
   const paragraph = document.querySelector("p");
   
