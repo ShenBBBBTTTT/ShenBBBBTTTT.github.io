@@ -1,3 +1,9 @@
+var userResponse = confirm("In");
+if (userResponse) {
+  alert("Good day")
+} else {
+  alert("Hello Thank you,Thank you very much")
+}
 window.onload=function(){
   const button = document.querySelector("input");
   const paragraph = document.querySelector("p");
