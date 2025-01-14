@@ -41,5 +41,19 @@
 <h6>Input Sth.</h6>
 <input type="text" id="" />
 <input type="button" value="TOUCH ME" id="">
+<script>
+  const button = document.querySelector("input");
+  const paragraph = document.querySelector("p");
+  
+  button.addEventListener("click", updateButton);
+  
+  function updateButton() {
+    if (button.value === "Run") {
+      button.value = "Stop";
+    } else {
+      button.value = "Run";
+    }
+  }
+</script>  
 <!-- 这是一个注释，再点我里输入你的密码 -->
 <!-- 2025.1.13 By SBT-->
