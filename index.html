@@ -1,6 +1,41 @@
 <link rel="stylesheet" type="text/css" href="ss.css"/>
 <script src='js.js'>alert("good day")</script>
 <link rel="icon" type="image/jpg" href="a.ico"/>
+
+<head>
+    <meta charset="UTF-8">
+    <title>timerDemo</title>
+
+    <script>
+        var second;
+        second=0;
+
+        var clock;
+        function resetTimer()
+        {
+            clearInterval(clock);
+            second=0;
+            document.getElementById('timeValue').value=second+'秒';
+        }
+        function startTimer()
+        {
+            clock=setInterval(timer,1000);
+        }
+
+        function stopTimer() {
+            clearInterval(clock);
+            document.getElementById('timeValue').value=second+'秒';
+        }
+        function timer(){
+            second++;
+            document.getElementById('timeValue').value=second+'秒';
+        }
+    </script>
+</head>
+<div style="text-align: center">
+    <input type="text" id="timeValue" value="0s" readonly><br>
+    <button type="button" onclick="startTimer()">begin</button> <button type="button" onclick="stopTimer()">stop</button> <button type="button" onclick="resetTimer()">reset</button>
+</div>
 <p align="center">
   <font face="Cascadia Code">
   <h2>Download something?</h2>
