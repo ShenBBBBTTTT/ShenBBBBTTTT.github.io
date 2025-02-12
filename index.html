@@ -76,6 +76,21 @@
   <a href="3D.html" target="_blank">Go around?</a>
 </p>
 <hr />
+
+<script>
+     function  getD1(){
+         var date=new Date();
+         var d1=date.toLocaleString();
+         document.getElementById("datetime").innerHTML =d1; 
+     }
+ 
+     setInterval("getD1();",1000);
+ 
+</script> 
+</head>
+<body  onload = getD1()>
+<div id="datetime">/div>
+</body>
 <h6>Input Sth.</h6>
 <input type="text" id="" />
 <input type="button" value="TOUCH ME" id=""> 
