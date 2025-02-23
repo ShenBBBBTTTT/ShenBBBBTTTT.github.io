@@ -71,7 +71,44 @@
 <div id="datetime">/div>
 </body>
 <h6>Input Sth.</h6>
-<input type="text" id="" />
-<input type="button" value="TOUCH ME" id=""> 
+<input type="text" id="txt1" />
+<input type="button" value="TOUCH ME" id="btt1"> 
+<div style="text-align:center"> 
+  <button onclick="playPause()">play/pause</button> 
+  <button onclick="makeBig()">bigger</button>
+  <button onclick="makeSmall()">smaller</button>
+  <button onclick="makeNormal()">normal</button>
+  <br> 
+  <video id="video1" width="420">
+    <source src="a.mp4" type="video/mp4">
+  </video>
+</div> 
+
+<script> 
+var myVideo=document.getElementById("video1"); 
+
+function playPause()
+{ 
+	if (myVideo.paused) 
+	  myVideo.play(); 
+	else 
+	  myVideo.pause(); 
+} 
+
+	function makeBig()
+{ 
+	myVideo.width=560; 
+} 
+
+	function makeSmall()
+{ 
+	myVideo.width=320; 
+} 
+
+	function makeNormal()
+{ 
+	myVideo.width=420; 
+} 
+</script> 
 <!-- 这是一个注释，再点我里输入你的密码 -->
 <!-- 2025.1.13 By SBT-->
