@@ -1,22 +1,100 @@
-<a href="index.html"">Main</a>__<a href="down.html"">Download</a></br>
-<font face="Cascadia Code">
-  <h2>Download something?</h2>
-  <div style="text-align:center;">
-  <img src="https://img.baidu.re/i/2025/01/u8k0tg.png" width="228" height="64"/></br>
-  <hr />
-  v3.09.01
-  <a href="https://file.uhsea.com/2502/5d2b9b4077510ca74231f46e0df7cc19O3.exe" target="_blank">Download Line1</a>
-  <a href="https://pan.baidu.re/down.php/b82f2acfb5011400c7654033939ff943.exe" target="_blank">Download Line2</a>
-  <hr />
-  v3.08.03
-  <a href="https://file.uhsea.com/2501/18bf26635a33df4392ee99d2526c3b94QD.exe" target="_blank">Download Line1</a>
-  <a href="https://pan.baidu.re/down.php/c8f082eb8804be72b06cd9b60dbf3917.exe" target="_blank">Download Line2</a>
-  <hr />
-  v3.07.18(portable)
-  <a href="https://file.uhsea.com/2502/281d4639f60b9841bfa40ac3776db40dBP.7z" target="_blank">Download Line1</a>
-  <a href="https://pan.baidu.re/down.php/7e7df278c02bcd49b8c6f51852171085.7z" target="_blank">Download Line2</a>
-  <hr />
-  v2.?.?
-  <a href="https://pan.baidu.re/down.php/8cd25d517d14bc594fd13dd4687562d9.exe" target="_blank">Download Line(expired)</a>
-  <hr />
-</font>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美化版下载页面</title>
+    <style>
+        body {
+            font-family: 'Cascadia Code', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .download-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .download-section img {
+            display: block;
+            margin: 0 auto;
+            width: 228px;
+            height: 64px;
+        }
+        .download-line {
+            margin-bottom: 15px;
+        }
+        .download-line a {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .version {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #555555;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #dddddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="download-section">
+    <nav>
+        <a href="index.html">Main</a> |
+        <a href="down.html">Download</a>
+    </nav>
+    <h2>Download something?</h2>
+    <img src="https://img.baidu.re/i/2025/01/u8k0tg.png" alt="Download Icon"/>
+
+    <div class="version">v3.09.01</div>
+    <div class="download-line">
+        <a href="https://file.uhsea.com/2502/5d2b9b4077510ca74231f46e0df7cc19O3.exe" target="_blank">Download Line1</a>
+        <a href="https://pan.baidu.re/down.php/b82f2acfb5011400c7654033939ff943.exe" target="_blank">Download Line2</a>
+    </div>
+    <hr/>
+
+    <div class="version">v3.08.03</div>
+    <div class="download-line">
+        <a href="https://file.uhsea.com/2501/18bf26635a33df4392ee99d2526c3b94QD.exe" target="_blank">Download Line1</a>
+        <a href="https://pan.baidu.re/down.php/c8f082eb8804be72b06cd9b60dbf3917.exe" target="_blank">Download Line2</a>
+    </div>
+    <hr/>
+
+    <div class="version">v3.07.18 (portable)</div>
+    <div class="download-line">
+        <a href="https://file.uhsea.com/2502/281d4639f60b9841bfa40ac3776db40dBP.7z" target="_blank">Download Line1</a>
+        <a href="https://pan.baidu.re/down.php/7e7df278c02bcd49b8c6f51852171085.7z" target="_blank">Download Line2</a>
+    </div>
+    <hr/>
+
+    <div class="version">v2.?.? (expired)</div>
+    <div class="download-line">
+        <a href="https://pan.baidu.re/down.php/8cd25d517d14bc594fd13dd4687562d9.exe" target="_blank">Download Line (expired)</a>
+    </div>
+    <hr/>
+</div>
+
+</body>
+</html>
