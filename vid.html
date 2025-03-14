@@ -50,6 +50,7 @@
         }
 
         .controls {
+            align-items:center;
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
@@ -136,18 +137,18 @@
     <div class="controls">
         <button onclick="playPause()">
             <span>▶</span>
-            <span>播放/暂停</span>
+            <span>Play/Pause</span>
         </button>
-        <button onclick="makeBig()">🔍 放大</button>
-        <button onclick="makeSmall()">🔎 缩小</button>
-        <button onclick="makeNormal()">⭮ 重置</button>
+        <button onclick="makeBig()">🔍 Bigger</button>
+        <button onclick="makeSmall()">🔎 Smaller</button>
+        <button onclick="makeNormal()">⭮ Refresh</button>
     </div>
 
     <div class="video-wrapper">
         <video id="video1">
             <source src="a.mp4" type="video/mp4">
             <source src="mov_bbb.ogg" type="video/ogg">
-            <p>您的浏览器不支持HTML5视频，请使用现代浏览器访问</p>
+            <p>No support for HTML5 Video</p>
         </video>
     </div>
 </div>
