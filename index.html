@@ -1,77 +1,200 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="ss.css"/>
-<link rel="icon" type="image/jpg" href="a.ico"/>
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>This is the title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A title</title>
+    <link rel="icon" type="image/jpg" href="a.ico">
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* 导航链接 */
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* 主要内容区域 */
+        .main-content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* 计时器面板 */
+        .timer-panel {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* 按钮样式 */
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 8px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        /* 时间显示 */
+        #timeValue {
+            text-align: center;
+            font-size: 1.4em;
+            padding: 12px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            width: 150px;
+            margin: 15px auto;
+            background: white;
+            display: block;
+        }
+
+        /* 特殊文本 */
+        .highlight-text {
+            color: #e74c3c;
+            font-style: italic;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        /* 页脚签名 */
+        .signature {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            color: #8e44ad;
+            padding: 15px;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            border-radius: 5px;
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        /* 链接装饰 */
+        .external-link::after {
+            content: "↗";
+            font-size: 0.8em;
+            margin-left: 5px;
+            color: #3498db;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+            
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="down.html">下载</a>
+        <a href="vid.html">视频</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="timer-panel">
+            <input type="text" id="timeValue" value="0s" readonly>
+            <div>
+                <button onclick="startTimer()">开始</button>
+                <button onclick="stopTimer()">暂停</button>
+                <button onclick="resetTimer()">重置</button>
+            </div>
+        </div>
+
+        <div class="highlight-text">
+            <p>学习HTML始于 2013年1月25日 18:48</p>
+            <a href="https://www.bilibili.com/video/BV1vt4y1N7Nh/" 
+               class="external-link" 
+               target="_blank">观看有趣内容...</a>
+        </div>
+
+        <div class="link-group">
+            <a href="https://netcut.cn/forum" class="external-link" target="_blank">社区论坛</a>
+            <a href="Gravity.html" class="external-link" target="_blank">重力小游戏</a>
+            <a href="3D.html" class="external-link" target="_blank">3D探索</a>
+        </div>
+
+        <div class="signature">
+            <u><em><strong>P!!F!!L!!S [○･｀Д´･ ○]</strong></em></u>
+        </div>
+
+        <div id="datetime"></div>
+    </div>
 
     <script>
-        var second;
-        second=0;
+        // 原有计时器逻辑保持不变
+        let second = 0;
+        let clock;
 
-        var clock;
-        function resetTimer()
-        {
+        function resetTimer() {
             clearInterval(clock);
-            second=0;
-            document.getElementById('timeValue').value=second+'s';
+            second = 0;
+            document.getElementById('timeValue').value = second + 's';
         }
-        function startTimer()
-        {
-            clock=setInterval(timer,1000);
+
+        function startTimer() {
+            clock = setInterval(() => {
+                second++;
+                document.getElementById('timeValue').value = second + 's';
+            }, 1000);
         }
 
         function stopTimer() {
             clearInterval(clock);
-            document.getElementById('timeValue').value=second+'s';
         }
-        function timer(){
-            second++;
-            document.getElementById('timeValue').value=second+'s';
-        }
-    </script>
-</head>
-<a href="index.html">Main</a>__
-<a href="down.html">Download</a>__
-<a href="vid.html">Video</a>
-</br>
-<div style="text-align: center">
-    <input type="text" id="timeValue" value="0s" readonly><br>
-    <button type="button" onclick="startTimer()">begin</button> <button type="button" onclick="stopTimer()">stop</button> <button type="button" onclick="resetTimer()">reset</button>
-</div>
-<p align="center">
-  <a href="https://www.bilibili.com/video/BV1vt4y1N7Nh/" target="_blank">Watch something interesting...</a></br>
-    #What can i say...</br>
-    <em><u>Study HTML from 13/01/25 18:48</br></u></em>
-    <hr />
-  </div>
-</p>
-<p div align="right">
-  <u><em><strong>
-        P!!F!!L!!S [○･｀Д´･ ○]
-      </strong></em></u>
-</p>
-<p div align="center">
-  <a href="https://netcut.cn/forum" target="_blank">Forum</a></br>
-  <a href="Gravity.html" target="_blank">LITTLE game</a></br>
-  <a href="3D.html" target="_blank">Go around?</a></br>
-</p>
-<hr />
 
-<script>
-     function  getD1(){
-         var date=new Date();
-         var d1=date.toLocaleString();
-         document.getElementById("datetime").innerHTML =d1; 
-     }
- 
-     setInterval("getD1();",1000);
- 
-</script> 
-</head>
-<body  onload = getD1()>
-<div id="datetime">/div>
+        // 时间显示功能
+        function updateTime() {
+            const date = new Date();
+            document.getElementById("datetime").textContent = date.toLocaleString();
+        }
+        setInterval(updateTime, 1000);
+        window.onload = updateTime;
+    </script>
 </body>
-<!-- 这是一个注释，再点我里输入你的密码 -->
-<!-- 2025.1.13 By SBT-->
+</html>
