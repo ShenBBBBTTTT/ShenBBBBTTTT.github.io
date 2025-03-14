@@ -91,18 +91,6 @@
             border-left: 4px solid #3498db;
         }
 
-        /* 页脚签名 */
-        .signature {
-            font-family: 'Courier New', monospace;
-            font-size: 1.1em;
-            color: #8e44ad;
-            padding: 15px;
-            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-            border-radius: 5px;
-            text-align: right;
-            margin-top: 30px;
-        }
-
         /* 链接装饰 */
         .external-link::after {
             content: "↗";
@@ -126,6 +114,14 @@
                 width: 100%;
                 margin: 5px 0;
             }
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -158,10 +154,6 @@
             <a href="https://netcut.cn/forum" class="external-link" target="_blank">Community Forum(EXPIRED)</a>
             <a href="Gravity.html" class="external-link" target="_blank">Gravity Game</a>
             <a href="3D.html" class="external-link" target="_blank">3D Exploration</a>
-        </div>
-
-        <div class="signature">
-            <u><em><strong>P!!F!!L!!S [○･｀Д´･ ○]</strong></em></u>
         </div>
 
         <div id="datetime"></div>
@@ -198,4 +190,5 @@
         window.onload = updateTime;
     </script>
 </body>
+<footer><u><em><strong>P!!F!!L!!S [○･｀Д´･ ○]</strong></em></u></footer>
 </html>
